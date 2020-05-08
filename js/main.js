@@ -342,7 +342,7 @@ function gameFinished () {
   gameFinishedBox.id = 'game-start'
   let gameFinished = document.createElement('h1')
   gameFinished.className = 'title'
-  gameFinished.innerHTML = 'ALL VIRUSES DESTROYED, HERO<br/><a href="images/fourier_is_in_the_details.png">Click Here</a>'
+  gameFinished.innerHTML = 'ALL VIRUSES DESTROYED, HERO<br/><a href="images/">Click Here</a>'
   if (game.points > game.highScore) {
     game.highScore = game.points
   }
