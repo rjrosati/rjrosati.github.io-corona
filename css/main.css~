@@ -1,0 +1,489 @@
+* {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    user-select: none;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 400px) {
+    .nav-header {
+        width: 100%;
+    }
+
+    body {
+        height: 100%;
+        padding-top: 100px;
+        background-repeat:no-repeat;
+        background-size:contain;
+        background-position:center;
+    }
+}
+
+body {
+    height: 100%;
+    background-size: cover;
+}
+
+#game-start {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 75%;
+    font-size: 50px;
+}
+
+.score {
+    font-weight: 600;
+	color: #221f1f;
+}
+
+.title {
+    margin-top: -150px;
+    font-size: 120px;
+    font-weight: 600;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+.color-text {
+    font-weight: 600;
+	color: #f35626;
+	background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+.game-start-button {
+    margin-top: 20px;
+    font-weight: 600;
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-animation: hue 10s infinite linear;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    -ms-animation: hue 10s infinite linear;
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;
+    -o-animation: hue 10s infinite linear;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+#instructionBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    text-align: justify;
+    height: 80%;
+    width: 80%;
+    font-size: 40px;
+    font-weight: 600;
+	color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #555a85, #35bdc2);
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-animation: hue 10s infinite linear;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    -ms-animation: hue 10s infinite linear;
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;
+    -o-animation: hue 10s infinite linear;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+.instructions-button {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 50px;
+	color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-animation: hue 10s infinite linear;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    -ms-animation: hue 10s infinite linear;
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;    
+    -o-animation: hue 10s infinite linear;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+.return-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.return-button {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 50px;
+	color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -moz-animation: hue 10s infinite linear;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    -ms-animation: hue 10s infinite linear;
+    -o-background-clip: text;
+    -o-text-fill-color: transparent;    
+    -o-animation: hue 10s infinite linear;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 10s infinite linear;
+}
+
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(-360deg);
+  }
+}
+
+@-moz-keyframes hue {
+    from {
+      -moz-filter: hue-rotate(0deg);
+    }
+    to {
+      -moz-filter: hue-rotate(-360deg);
+    }
+}
+
+@-ms-keyframes hue {
+    from {
+      -ms-filter: hue-rotate(0deg);
+    }
+    to {
+      -ms-filter: hue-rotate(-360deg);
+    }
+}
+
+@-o-keyframes hue {
+    from {
+      -o-filter: hue-rotate(0deg);
+    }
+    to {
+      -o-filter: hue-rotate(-360deg);
+    }
+}
+
+.bombs {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: -10px;
+}
+
+.bombs img {
+        margin-top: 1px;
+        margin-left: 18px;
+        height: 100px;
+        width: 100px;
+        margin-bottom: 20px;
+}
+
+#lives {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;    
+}
+
+#lives img {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+#points {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 40px;
+    padding-left: 20px;
+}
+
+.omni {
+    position: absolute;
+}
+
+.omnispark {
+    position: absolute;
+}
+
+.almightyeel {
+    position: absolute;
+}
+
+.theoriginalmeow {
+    position: absolute;
+}
+
+.nav-header {
+    top: 0;
+    transition: top 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #2b2828;
+    height: 100px;
+    width: 100%;
+    -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+    -moz-box-shadow: 3px 3px 5px 6px #ccc;  
+    box-shadow: 1px 3px 10px 0px #000;  
+    z-index: 500;
+}
+
+.logo {
+    display: flex;
+    width: 15vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 28px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.nav-options {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+}
+
+.nav-options li {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-options li:hover {
+    background-color: rgb(75, 75, 75);
+}
+
+.nav-options a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 50px;
+}
+
+
+.game-space {
+    position: relative;
+    height: 100% ;
+    background: linear-gradient(to left, #f163ce, #ec6565);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ 
+}
+
+.box-area {
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.box-area li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    animation: animate 20s linear infinite;
+    background-color: rgba(255,255,255,0.4);
+    bottom: -350px;
+}
+
+.box-area li:nth-child(1) {
+    left: 86%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 0s;
+    animation-duration: 5s;
+}
+.box-area li:nth-child(2) {
+    left: 7%;
+    width: 100;
+    height: 100;
+    animation-delay: 2.0s;
+    animation-duration: 5.0s;
+}
+
+.box-area li:nth-child(3) {
+    left: 70%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 3.5s;
+    animation-duration: 10s;
+}
+
+.box-area li:nth-child(4) {
+    left: 38%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 5.2s;
+    animation-duration: 10s;
+    top: 1250px;
+}
+
+.box-area li:nth-child(5) {
+    left: 65%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 7.0s;
+    animation-duration: 5.0s;
+}
+
+.box-area li:nth-child(6) {
+    left: 12%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 8.0s;
+    animation-duration: 5s;
+}
+
+.box-area li:nth-child(7) {
+    left: 20%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 9.2s;
+    animation-duration: 5.0s;
+}
+
+.box-area li:nth-child(8) {
+    left: 31%;
+    width: 50px;
+    height: 50px;
+    animation-delay: 9.5s;
+    animation-duration: 7.0s;
+}
+
+.box-area li:nth-child(9) {
+    left: 54%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 10s;
+    animation-duration: 7.0s;
+}
+
+.box-area li:nth-child(10) {
+    left: 92%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 4.0s;
+    animation-duration: 6.0
+}
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-1200px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.pixelcat {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+}
+
+.death-anim {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        transform: translate3d(0,40px,0)
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+.animated {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-fill-mode: both
+}
+
+.animatedFadeInUp {
+    opacity: 0
+}
+
+.fadeInUp {
+    opacity: 0;
+    animation-name: fadeInUp;
+    -webkit-animation-name: fadeInUp;
+}
+
+
