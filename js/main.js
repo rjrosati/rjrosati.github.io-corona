@@ -342,7 +342,7 @@ function gameFinished () {
   gameFinishedBox.id = 'game-start'
   let gameFinished = document.createElement('h1')
   gameFinished.className = 'title'
-  gameFinished.innerHTML = 'ALL VIRUSES DESTROYED, HERO<br/><a href="images/">Click Here</a>'
+  gameFinished.innerHTML = 'ALL VIRUSES DESTROYED, HERO'
   if (game.points > game.highScore) {
     game.highScore = game.points
   }
@@ -409,7 +409,7 @@ var bombUse = function(event) {
           game.totalEnemies -= 1
         }
         let pointsUpdate = document.querySelector("#points")
-        pointsUpdate.innerHTML = `${game.points}&#47;${game.winpoints} VIRUS DESTRUCTIONS`
+        pointsUpdate.innerHTML = `${game.points} VIRUS DESTRUCTIONS`
         for (let k = 0; k < cloneList.length; k++) {
           setTimeout(() => {
             cloneList[k].remove()
@@ -429,7 +429,7 @@ function spawnBombs () {
   for (let i = 0; i < 3; i++) {
       let bombElement = document.createElement('img')
       bombElement.src = 'assets/death.gif'
-      bombElement.className = 'bomb' 
+      bombElement.className = 'bomb'
       innerBombBox.appendChild(bombElement)
   }
 }
@@ -467,7 +467,7 @@ function spawnPoints () {
   pointBox.style.fontSize = '50px'
   parentNode.appendChild(pointBox)
   let innerPointBox = document.querySelector("#points")
-  innerPointBox.innerHTML = `${game.points}&#47;${game.winpoints} VIRUS DESTRUCTIONS`
+  innerPointBox.innerHTML = `${game.points} VIRUS DESTRUCTIONS`
 }
 
 function bossReset () {
@@ -927,7 +927,7 @@ function clickEnemy () {
     }
     game.totalEnemies -= 1
     let pointsUpdate = document.querySelector("#points")
-    pointsUpdate.innerHTML = `${game.points}&#47;${game.winpoints} VIRUS DESTRUCTIONS`
+    pointsUpdate.innerHTML = `${game.points} VIRUS DESTRUCTIONS`
     this.removeEventListener('click', clickEnemy)
     this.removeEventListener('contextmenu', clickEnemy)
     this.style.pointerEvents = "none"
