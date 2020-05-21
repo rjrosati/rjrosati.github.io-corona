@@ -557,8 +557,8 @@ function newEnemy(src) {
     for (let j = 0; j < 2; j++) {
       game.totalEnemies += 1
       let enemyElement = enemyConstructor(src)
-      enemyElement.style.width = '52px'
-      enemyElement.style.height = '100px'
+      enemyElement.style.width = '128px'
+      enemyElement.style.height = '128px'
       enemyElement.className = `pixelcat parakat${j}` 
       enemyElement.setAttribute('lives', game.enemyTypes.parakat.lives)
       document.querySelector(".game-space").appendChild(enemyElement)
@@ -629,8 +629,8 @@ function newEnemy(src) {
     for (let j = 0; j < 2; j++) {
       game.totalEnemies += 1
       let enemyElement = enemyConstructor(src)
-      enemyElement.style.width = '150px'
-      enemyElement.style.height = '150px'
+      enemyElement.style.width = '420px'
+      enemyElement.style.height = '300px'
       enemyElement.className = 'pixelcat hungrycat' 
       enemyElement.setAttribute('lives', game.enemyTypes.hungrycat.lives)
       document.querySelector(".game-space").appendChild(enemyElement)
@@ -886,7 +886,7 @@ function clearEnemy() {
   }
 }
 
-function clickEnemy () { 
+function clickEnemy () {
   let lives = parseInt(this.getAttribute('lives'))
   lives -= 1
   if (lives === 0) {
@@ -894,9 +894,9 @@ function clickEnemy () {
     enemyDeathSound()
     //
     game.points += 1
-    if (game.points >= game.winpoints) {
-        gameFinished()
-    }
+    //if (game.points >= game.winpoints) {
+    //    gameFinished()
+    //}
     if (game.points >= 100 && game.points < 250) {
       if (game.spawnOmnicat === false) {
         game.spawnOmnicat = true
