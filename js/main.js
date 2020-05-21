@@ -230,8 +230,8 @@ function clickGameStart () {
   spawnHeart()
   var keyDownlistener = document
   keyDownlistener.addEventListener("keydown", bombUse)
-  let logoClick = document.querySelector('.logo a')
-  logoClick.href = '#'
+  //let logoClick = document.querySelector('.logo a')
+  //logoClick.href = '#'
   game.gameRun = true
   document.getElementById('game-start').remove()
   gameStart()

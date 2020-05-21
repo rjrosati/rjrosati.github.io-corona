@@ -21,7 +21,7 @@ html {
 
     body {
         height: 100%;
-        padding-top: 100px;
+        padding-top: 0px;
         background-repeat:no-repeat;
         background-size:contain;
         background-position:center;
@@ -316,7 +316,7 @@ body {
 
 .game-space {
     position: relative;
-    height: 100% ;
+    height: calc(100% - 100px) ;
     background: linear-gradient(to left, #f163ce, #ec6565);
     display: flex;
     justify-content: center;
